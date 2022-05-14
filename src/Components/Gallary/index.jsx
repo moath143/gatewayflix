@@ -15,7 +15,6 @@ const Gallary = () => {
       `/movie/${id}/images?api_key=278dc390fe2dab0dcb2a2a1872dcc11f`
     );
     setGallary(res.data.backdrops);
-    console.log("🚀 ~ file: index.jsx ~ line 18 ~ fetchData ~ res.data.backdrops", res.data.backdrops)
   }, []);
 
     const data = useMemo(() => {
