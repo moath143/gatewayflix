@@ -8,7 +8,7 @@ const ImageSlider = (props) => {
       <Overlay></Overlay>
       <img src={`https://image.tmdb.org/t/p/original${props.back}`} />
       <Info>
-        <Typography as="h1" weight={700} size={72} height={96}>
+        <Typography as="h1" weight={700} size={40} height={60}>
           {props.title}
         </Typography>
         {/* <Typography as="p" weight={400} size={16} height={32} color={"#e6e6e6"}>
