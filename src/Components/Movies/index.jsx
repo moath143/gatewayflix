@@ -34,6 +34,7 @@ const Movies = () => {
   useEffect(() => { 
     fetchData()
   }, [])
+
   return (
     <SectionMovies>
       <Container>
