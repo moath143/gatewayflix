@@ -46,39 +46,6 @@ const Gallary = () => {
           <Fancybox>
             <p>
               {data}
-              {/* <a
-                data-fancybox="gallery"
-                href="https://lipsum.app/id/33/1024x768"
-              >
-                <img
-                  alt=""
-                  src="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
-                />
-              </a>
-
-              <a
-                data-fancybox="gallery"
-                href="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
-              >
-                <img
-                  alt=""
-                  src="https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
-                />
-              </a>
-
-              <a
-                data-fancybox="gallery"
-                href="https://lipsum.app/id/35/1024x768"
-              >
-                <img alt="" src="https://lipsum.app/id/35/200x150" />
-              </a>
-
-              <a
-                data-fancybox="gallery"
-                href="https://lipsum.app/id/36/1024x768"
-              >
-                <img alt="" src="https://lipsum.app/id/36/200x150" />
-              </a> */}
             </p>
           </Fancybox>
         </ImageGallary>

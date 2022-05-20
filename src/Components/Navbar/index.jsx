@@ -35,9 +35,6 @@ const Navbar = () => {
             <li>
               <NavLink to="/tv-show">TV Show</NavLink>
             </li>
-            <li>
-              <NavLink to="/video">Video</NavLink>
-            </li>
           </Ul>
           <Search width={20} type="text" placeholder="search movie ...." />
           <Switch checked={checked} onChange={handleChange} />

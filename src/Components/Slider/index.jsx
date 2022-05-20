@@ -3,6 +3,7 @@ import { Typography } from "../../Theme/styles";
 import { ImageSection, Overlay, Info } from "./styleSlider";
 
 const ImageSlider = (props) => {
+  console.log(props.url)
   return (
     <ImageSection>
       <Overlay></Overlay>
@@ -11,9 +12,6 @@ const ImageSlider = (props) => {
         <Typography as="h1" weight={700} size={40} height={60}>
           {props.title}
         </Typography>
-        {/* <Typography as="p" weight={400} size={16} height={32} color={"#e6e6e6"}>
-          {props.overview}
-        </Typography> */}
         <ul>
           <li>
             <Typography as="p" weight={500} size={16} height={24}>

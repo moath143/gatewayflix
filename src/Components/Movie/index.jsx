@@ -30,8 +30,6 @@ const Movie = (props) => {
   }, []);
 
 
-  console.log(props.id);
-
   return (
     <Link to={`/movie/${props.id}`}>
       <Overlay></Overlay>

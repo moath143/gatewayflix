@@ -1,34 +1,29 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Movie from "../../Components/Movie";
 import Search from "../../Components/Search";
 import TitleComp from "../../Components/Title";
-import { Container, Typography } from "./../../Theme/styles";
+import { Container } from "./../../Theme/styles";
 import {
   ButtonMore,
   ButtonWrapper,
   SectionMovies,
   ExploreSection,
 } from "./styleExploreMovie";
-
 import CRUDRequest from "./../../API";
-import { Overlay } from "../../Components/Hero/styleHero";
-import { Tags } from "./../../Components/Movie/styleMovie";
-import { Info } from "./../../Components/Slider/styleSlider";
-import { Link } from "react-router-dom";
+
 
 const ExploreMovie = () => {
   const [moviesList, setMoviesList] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = async () => {
     const res = await CRUDRequest.get(
       `/movie/popular?api_key=278dc390fe2dab0dcb2a2a1872dcc11f&page=${pageNumber}`
     );
-    setMoviesList((prevState) => [...prevState, ...res.data.results]);
-  }, []);
+    setMoviesList([...moviesList, ...res.data.results]);
+  };
 
-  const data = useMemo(() => {
-    return moviesList.map((item, index) => {
+  const data =  moviesList.map((item, index) => {
       return (
         <Movie
           key={index}
@@ -40,16 +35,14 @@ const ExploreMovie = () => {
         />
       );
     });
-  }, [moviesList]);
 
-
-  const handlePageNumber = useCallback(() => {
+  const handlePageNumber = () => {
     setPageNumber(pageNumber + 1);
-  }, []);
+  };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [pageNumber]);
 
   return (
     <ExploreSection>

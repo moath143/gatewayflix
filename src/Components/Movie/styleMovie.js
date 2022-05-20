@@ -8,6 +8,8 @@ export const Tags = styled.div`
   top: 5%;
   left: 5%;
   z-index: 3;
+  text-transform: capitalize;
+  font-weight: 700;
   ${flex("flex", "flex-start", "flex-start", "row", "wrap")}
   gap: 10px;
   & > p {
