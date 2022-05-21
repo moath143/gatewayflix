@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Routes, Route} from 'react-router-dom'
 import { ThemeProvider } from "styled-components";
 import themeMode from './Theme/mode'
@@ -11,10 +11,14 @@ import DetailsMovie from './Screens/DetailsMovie/index';
 import TVShow from "./Screens/TVShow";
 import DetailsTV from "./Screens/DetailsTV";
 const App = () => {
-  const[theme, toggleTheme] = useDarkMode()
+  const [theme, setTheme] = useState('light')
+  const themeToggle = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+  console.log(theme);
   return (
-    <ThemeProvider theme={themeMode}>
-      <Navbar />
+    <ThemeProvider theme={theme === "light" ? themeMode.light : themeMode.dark}>
+      <Navbar themeToggle={themeToggle} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<ExploreMovie />} />

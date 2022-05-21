@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
     font-family: 'DM Sans', sans-serif;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
+    background-color: ${props => props.theme};
 }
 
 a{

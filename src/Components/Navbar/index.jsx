@@ -5,11 +5,12 @@ import { Link, NavLink } from "react-router-dom";
 import { Nav, Ul, Wrapper } from "./styleNavbar";
 import Search from "../Search";
 
-const Navbar = () => {
-    const[checked, setChecked] = useState(false)
+const Navbar = (props) => {
+    const[checked, setChecked] = useState(true)
 
     const handleChange = (checked) => { 
-        setChecked(checked)
+      setChecked(checked)
+       props.themeToggle()
     }
 
   return (
@@ -23,7 +24,7 @@ const Navbar = () => {
             height={"48"}
             color={"white"}
           >
-            <Link to='/'>Gatewayflix</Link>
+            <Link to="/">Gatewayflix</Link>
           </Typography>
           <Ul>
             <li>
@@ -37,7 +38,11 @@ const Navbar = () => {
             </li>
           </Ul>
           <Search width={20} type="text" placeholder="search movie ...." />
-          <Switch checked={checked} onChange={handleChange} />
+          <Switch
+
+            checked={checked}
+            onChange={handleChange}
+          />
         </Wrapper>
       </Container>
     </Nav>

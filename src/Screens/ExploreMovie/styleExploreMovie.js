@@ -3,7 +3,12 @@ import { flex } from "./../../Theme/styles";
 
 
 export const ExploreSection = styled.section`
-  background: linear-gradient(270deg, #000000 -2.92%, rgba(0, 0, 0, 0) 100%);
+  /* background: linear-gradient(
+    270deg,
+    ${(props) => props.theme.text.secodary} -2.92%,
+    ${(props) => props.theme.text.secodary} 100%
+  ); */
+  background-color: ${props => props.theme.body.background};
   padding: 50px 0;
 `;
 export const SectionMovies = styled.section`

@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 
 export const Typography = styled.p`
-  color: ${(props) => props.color};
+  color: ${(props) => props.theme.text.secondary};
   font-size: ${(props) => pixelToRem(props.size)};
   font-weight: ${(props) => props.weight};
   line-height: ${(props) => pixelToRem(props.height)};
